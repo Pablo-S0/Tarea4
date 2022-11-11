@@ -1,0 +1,17 @@
+﻿--Create DataBase Hospital
+
+use Hospital
+
+Create table Paciente
+(
+	idPaciente int identity (1,1)  primary key,
+	nombre varchar(50) not null,
+	genero char(1) constraint chck_genero check (genero = 'F' or genero = 'm'),
+	Seguro bit,
+	telefono varchar(20),
+	edad int, 
+	calle varchar(20), 
+	numero varchar(20),
+	ciudad varchar(20)
+	
+) 
